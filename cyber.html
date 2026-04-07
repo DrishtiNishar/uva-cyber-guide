@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity — UVA Cyber & IP Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/content.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-shield"></div>
+      <span class="nav-title"><strong>UVA</strong> Cyber &amp; IP Guide</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cyber.html">Cybersecurity</a></li>
+      <li><a href="ip.html">IP Protection</a></li>
+      <li><a href="simulation.html">Simulation</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="breadcrumb">Guide → Cybersecurity</div>
+    <h1>Cybersecurity for Students</h1>
+    <p>Understanding the threats, protecting yourself, and staying safe in a university environment.</p>
+  </div>
+  <div class="orange-bar"></div>
+
+  <div class="content-layout">
+    <aside class="content-sidebar">
+      <div class="sidebar-label">On this page</div>
+      <ul class="sidebar-nav">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#malware">Malware</a></li>
+        <li><a href="#phishing">Phishing &amp; Social Engineering</a></li>
+        <li><a href="#passwords">Password Attacks</a></li>
+        <li><a href="#network">Network &amp; Lab Security</a></li>
+        <li><a href="#uva">UVA-Specific Threats</a></li>
+        <li><a href="#checklist">Best Practices Checklist</a></li>
+      </ul>
+    </aside>
+
+    <div class="content-body">
+      <h2 id="overview">Overview</h2>
+      <p>As AI and vibe coding come to the forefront of programming culture, cyber threats have become increasingly common and much easier to execute. College students are a particularly attractive target — they use shared networks, handle valuable research data, and often lack formal security training.</p>
+      <div class="stat-row">
+        <div class="stat-box"><span class="stat-num">70%</span><span class="stat-label">of students likely to fall for a phishing attack</span></div>
+        <div class="stat-box"><span class="stat-num">961%</span><span class="stat-label">rise in IoT malware attacks on universities since 2022</span></div>
+        <div class="stat-box"><span class="stat-num">144</span><span class="stat-label">U.S. universities targeted in a single IP theft campaign</span></div>
+      </div>
+
+      <h2 id="malware">Malware</h2>
+      <p>Malware (short for <em>malicious software</em>) is code written specifically to harm users or systems — destroying data, stealing information, or rendering infected systems unusable.</p>
+      <div class="threat-card">
+        <div class="threat-icon">💰</div>
+        <div>
+          <h4>Ransomware</h4>
+          <p>Locks your data or device and threatens to keep it inaccessible — or release sensitive information — unless a ransom is paid. Universities are prime targets because of the value of research data.</p>
+        </div>
+      </div>
+      <div class="threat-card">
+        <div class="threat-icon">🐴</div>
+        <div>
+          <h4>Trojan Horse</h4>
+          <p>Malicious code hidden within seemingly useful programs. It tricks users into downloading it, then opens backdoors or installs additional malware once it has a foothold in the system.</p>
+        </div>
+      </div>
+      <div class="callout danger">
+        <strong>⚠ Real Case: Penn State 2015</strong>
+        Two cyberattacks — one originating from China — targeted Penn State's College of Engineering using advanced malware. The university was forced to disconnect from the internet entirely. Student usernames and passwords were compromised, leading to mandatory two-factor authentication.
+      </div>
+
+      <h2 id="phishing">Phishing &amp; Social Engineering</h2>
+      <p>Social engineering — sometimes called "human hacking" — manipulates users into exposing confidential information. It exploits trust, urgency, and familiarity rather than technical vulnerabilities.</p>
+      <div class="threat-card">
+        <div class="threat-icon">🎣</div>
+        <div>
+          <h4>Phishing</h4>
+          <p>Attackers use rogue links, fake emails, and spoofed phone calls to trick people into sharing personal information or sending money. Spear phishing is a targeted version aimed specifically at you.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>🎯 At UVA Right Now</strong>
+        Many students are currently receiving phishing emails in their Outlook junk folders — fake high-paying remote job offers and impersonated Microsoft emails claiming passwords have expired. Always verify before clicking any link.
+      </div>
+
+      <h2 id="passwords">Password Attacks</h2>
+      <p>Attackers obtain user passwords either through phishing or by using <em>brute-force</em> — trying as many combinations as possible until one is correct. Weak or reused passwords make this significantly easier.</p>
+      <div class="threat-card">
+        <div class="threat-icon">🔑</div>
+        <div>
+          <h4>Credential Stuffing</h4>
+          <p>Attackers take username/password pairs from one data breach and try them across hundreds of other sites. If you reuse passwords, one breach exposes all your accounts.</p>
+        </div>
+      </div>
+
+      <h2 id="network">Network &amp; Lab Security</h2>
+      <p>Research labs present unique cybersecurity risks. IoT devices — sensors, instruments, connected equipment — often run outdated firmware and weak authentication, creating direct entry points for attackers seeking research data.</p>
+      <div class="callout info">
+        <strong>📡 Lab Environment Risk</strong>
+        IoT malware attacks on universities rose 961% since 2022. Unsecured lab devices with default passwords create direct pathways to sensitive research networks. Always follow your lab's network security protocols.
+      </div>
+
+      <h2 id="uva">UVA-Specific Threats</h2>
+      <p>The University of Michigan experienced a two-day internet shutdown at the start of the 2023 school year due to a significant cybersecurity incident. Students had to rely on cell phones and off-campus networks to attend lectures. Similar disruptions could happen at UVA.</p>
+      <p>Ongoing phishing campaigns at UVA target thousands of students and faculty regularly. Even security-aware users can be tricked. Attackers are sophisticated and constantly refining their tactics.</p>
+
+      <div class="divider"></div>
+      <h2 id="checklist">Best Practices Checklist</h2>
+      <ul class="checklist">
+        <li>Enable Multi-Factor Authentication (MFA) on all university accounts</li>
+        <li>Use a unique, complex password for every account (consider a password manager)</li>
+        <li>Verify the sender before clicking any link or attachment in email</li>
+        <li>Keep your operating system and software up to date</li>
+        <li>Avoid using public Wi-Fi without a VPN</li>
+        <li>Never plug in unknown USB drives</li>
+        <li>Report suspicious emails to UVA IT Security immediately</li>
+        <li>Back up research data to university-approved storage regularly</li>
+      </ul>
+      <div class="content-cta">
+        <a href="simulation.html" class="btn-primary">▶ Practice with a Simulation</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>

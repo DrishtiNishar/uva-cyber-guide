@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation — UVA Cyber & IP Guide</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/simulation.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-shield"></div>
+      <span class="nav-title"><strong>UVA</strong> Cyber &amp; IP Guide</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cyber.html">Cybersecurity</a></li>
+      <li><a href="ip.html">IP Protection</a></li>
+      <li><a href="simulation.html">Simulation</a></li>
+    </ul>
+  </nav>
+
+  <div class="sim-page">
+
+    <!-- ── TOPIC SELECT SCREEN ── -->
+    <div id="screenTopicSelect" class="sim-screen active">
+      <div class="trail-header">
+        <div class="trail-eyebrow">Interactive Training</div>
+        <h1>The Cyber Trail</h1>
+        <p>Navigate real-world scenarios. Every decision has consequences — just like the Oregon Trail, except instead of dysentery, you get hacked.</p>
+      </div>
+      <div class="topic-grid">
+        <button class="topic-card" onclick="Game.start('phishing')">
+          <div class="topic-icon">🎣</div>
+          <h3>Phishing &amp; Social Engineering</h3>
+          <p>A suspicious email arrives. What do you do?</p>
+          <div class="topic-tag">3 scenarios</div>
+        </button>
+        <button class="topic-card" onclick="Game.start('research')">
+          <div class="topic-icon">🔬</div>
+          <h3>Research IP Protection</h3>
+          <p>Someone wants your thesis data.</p>
+          <div class="topic-tag">3 scenarios</div>
+        </button>
+        <button class="topic-card" onclick="Game.start('network')">
+          <div class="topic-icon">🌐</div>
+          <h3>Device &amp; Network Security</h3>
+          <p>You're working late in the lab...</p>
+          <div class="topic-tag">3 scenarios</div>
+        </button>
+        <button class="topic-card" onclick="Game.start('ip')">
+          <div class="topic-icon">⚖️</div>
+          <h3>IP Ownership</h3>
+          <p>A startup wants your university project.</p>
+          <div class="topic-tag">3 scenarios</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── GAME SCREEN ── -->
+    <div id="screenGame" class="sim-screen">
+
+      <!-- HUD -->
+      <div class="trail-hud">
+        <div class="hud-left">
+          <span class="hud-topic" id="hudTopic">Topic</span>
+          <div class="trail-progress-wrap">
+            <div class="trail-progress-track">
+              <div class="trail-progress-fill" id="trailProgress"></div>
+              <div class="trail-dot" id="trailDot"></div>
+            </div>
+            <div class="trail-progress-label">
+              <span>Start</span><span id="progressLabel">Scene 1 of 3</span><span>End</span>
+            </div>
+          </div>
+        </div>
+        <div class="hud-right">
+          <div class="hud-stat safe" id="statGood">✓ <span id="goodCount">0</span> safe</div>
+          <div class="hud-stat risk" id="statBad">☠ <span id="badCount">0</span> risky</div>
+        </div>
+      </div>
+
+      <!-- Scene card -->
+      <div class="scene-card" id="sceneCard">
+
+        <!-- Scene visual / animation area -->
+        <div class="scene-visual" id="sceneVisual">
+          <div class="scene-bg" id="sceneBg"></div>
+          <div class="scene-anim" id="sceneAnim"></div>
+        </div>
+
+        <!-- Story text -->
+        <div class="scene-story">
+          <div class="scene-label" id="sceneLabel">Scene</div>
+          <p class="scene-text" id="sceneText"></p>
+        </div>
+
+        <!-- Choices -->
+        <div class="scene-choices" id="sceneChoices"></div>
+
+        <!-- Consequence panel (shown after choice) -->
+        <div class="consequence-panel" id="consequencePanel">
+          <div class="consequence-anim" id="consequenceAnim"></div>
+          <div class="consequence-body">
+            <h4 id="consequenceTitle"></h4>
+            <p id="consequenceText"></p>
+          </div>
+        </div>
+
+        <button class="btn-continue" id="btnContinue" onclick="Game.next()">Continue on the Trail →</button>
+      </div>
+    </div>
+
+    <!-- ── END SCREEN ── -->
+    <div id="screenEnd" class="sim-screen">
+      <div class="end-card">
+        <div class="end-icon" id="endIcon"></div>
+        <h2 id="endTitle"></h2>
+        <div class="end-score" id="endScore"></div>
+        <p id="endMsg"></p>
+        <div class="end-takeaway" id="endTakeaway"></div>
+        <div class="end-actions">
+          <button class="btn-primary" onclick="Game.restart()">Try Another Topic</button>
+          <button class="btn-outline-dark" onclick="Game.replay()">Replay This Scenario</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sim-page -->
+
+  <script src="js/nav.js"></script>
+  <script src="js/simulation.js"></script>
+</body>
+</html>
