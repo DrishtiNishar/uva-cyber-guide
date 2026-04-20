@@ -4,11 +4,7 @@
 
 /* ── Hero section ── */
 .hero {
-  min-height: calc(100vh - var(--nav-h));
-  background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-mid) 100%);
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  min-height: auto;
   overflow: visible;
 }
 .hero::before {
