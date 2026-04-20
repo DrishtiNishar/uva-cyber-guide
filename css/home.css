@@ -31,7 +31,6 @@
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 .hero-eyebrow {
   display: inline-block;
   background: rgba(229,114,0,0.14);
@@ -42,7 +41,6 @@
   padding: 0.3rem 0.9rem; border-radius: 20px;
   margin-bottom: 1.4rem;
 }
-
 .hero-content h1 {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 5vw, 3.6rem);
@@ -50,13 +48,11 @@
   margin-bottom: 1.1rem;
 }
 .hero-content h1 em { color: var(--orange); font-style: normal; }
-
 .hero-sub {
-  color: rgba(255,255,255,0.62);
+  color: rgba(255,255,255,0.80); /* was 0.62 — raised for AAA contrast on navy */
   font-size: 1.05rem; max-width: 540px;
   margin: 0 auto 2.2rem;
 }
-
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; }
 
 /* ── Bottom cards ── */
@@ -76,8 +72,15 @@
 .hero-card:last-child { border-right: none; }
 .hero-card:hover { background: rgba(229,114,0,0.1); }
 .hero-card-icon { font-size: 1.9rem; }
-.hero-card h3 { font-family: var(--font-serif); color: var(--white); font-size: 0.95rem; }
-.hero-card p { color: rgba(255,255,255,0.48); font-size: 0.78rem; }
+.hero-card h2 { /* was h3 — updated to match HTML heading fix */
+  font-family: var(--font-serif);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+.hero-card p {
+  color: rgba(255,255,255,0.75); /* was 0.48 — this was the 1:1 invisible text, raised for AA contrast */
+  font-size: 0.78rem;
+}
 
 /* ── Responsive ── */
 @media (max-width: 700px) {
