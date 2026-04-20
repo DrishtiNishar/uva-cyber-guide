@@ -8,55 +8,58 @@
   <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav>
-    <a href="index.html" class="nav-brand">
-      <div class="nav-shield"></div>
-      <span class="nav-title"><strong>UVA</strong> Cyber &amp; IP Guide</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cyber.html">Cybersecurity</a></li>
-      <li><a href="ip.html">IP Protection</a></li>
-      <li><a href="simulation.html">Simulation</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-shield" aria-hidden="true"></div>
+        <span class="nav-title"><strong>UVA</strong> Cyber &amp; IP Guide</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cyber.html">Cybersecurity</a></li>
+        <li><a href="ip.html">IP Protection</a></li>
+        <li><a href="simulation.html">Simulation</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">UVA Engineering · Student Resource</div>
-      <h1>Cybersecurity &amp; <em>IP Protection</em> Guide</h1>
-      <p class="hero-sub">Everything UVA engineering students need to stay safe online, protect their research, and understand their intellectual property rights — in one place.</p>
-      <div class="hero-actions">
-        <a href="simulation.html" class="btn-primary">▶ Start Simulation</a>
-        <a href="cyber.html" class="btn-outline">Read the Guide</a>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <div class="hero-eyebrow">UVA Engineering · Student Resource</div>
+        <h1 id="hero-heading">Cybersecurity &amp; <em>IP Protection</em> Guide</h1>
+        <p class="hero-sub">Everything UVA engineering students need to stay safe online, protect their research, and understand their intellectual property rights — in one place.</p>
+        <div class="hero-actions">
+          <a href="simulation.html" class="btn-primary">▶ Start Simulation</a>
+          <a href="cyber.html" class="btn-outline">Read the Guide</a>
+        </div>
       </div>
-    </div>
-
-    <div class="hero-cards">
-      <a href="cyber.html" class="hero-card">
-        <div class="hero-card-icon">🛡️</div>
-        <h3>Cybersecurity</h3>
-        <p>Threats, attacks &amp; defenses</p>
-      </a>
-      <a href="ip.html" class="hero-card">
-        <div class="hero-card-icon">⚖️</div>
-        <h3>IP Protection</h3>
-        <p>Ownership, rights &amp; policy</p>
-      </a>
-      <a href="simulation.html" class="hero-card">
-        <div class="hero-card-icon">🎮</div>
-        <h3>Simulation</h3>
-        <p>Learn by doing — 4 scenarios</p>
-      </a>
-      <a href="simulation.html" class="hero-card">
-        <div class="hero-card-icon">🗺️</div>
-        <h3>Oregon Trail Mode</h3>
-        <p>Story-driven decisions &amp; consequences</p>
-      </a>
-    </div>
-  </section>
+      <nav class="hero-cards" aria-label="Site sections">
+        <a href="cyber.html" class="hero-card">
+          <div class="hero-card-icon" aria-hidden="true">🛡️</div>
+          <h2>Cybersecurity</h2>
+          <p>Threats, attacks &amp; defenses</p>
+        </a>
+        <a href="ip.html" class="hero-card">
+          <div class="hero-card-icon" aria-hidden="true">⚖️</div>
+          <h2>IP Protection</h2>
+          <p>Ownership, rights &amp; policy</p>
+        </a>
+        <a href="simulation.html" class="hero-card">
+          <div class="hero-card-icon" aria-hidden="true">🎮</div>
+          <h2>Simulation</h2>
+          <p>Learn by doing — 4 scenarios</p>
+        </a>
+        <a href="simulation.html" class="hero-card">
+          <div class="hero-card-icon" aria-hidden="true">🗺️</div>
+          <h2>Oregon Trail Mode</h2>
+          <p>Story-driven decisions &amp; consequences</p>
+        </a>
+      </nav>
+    </section>
+  </main>
 
   <script src="js/nav.js"></script>
 </body>
