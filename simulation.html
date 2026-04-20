@@ -32,30 +32,43 @@
         <p>Navigate real-world scenarios. Every decision has consequences — just like the Oregon Trail, except instead of dysentery, you get hacked.</p>
       </div>
       <div class="topic-grid">
-        <button class="topic-card" onclick="Game.start('phishing')">
+        <button class="topic-card" onclick="Game.openTopic('phishing')">
           <div class="topic-icon">🎣</div>
           <h3>Phishing &amp; Social Engineering</h3>
           <p>A suspicious email arrives. What do you do?</p>
           <div class="topic-tag">3 scenarios</div>
         </button>
-        <button class="topic-card" onclick="Game.start('research')">
+        <button class="topic-card" onclick="Game.openTopic('research')">
           <div class="topic-icon">🔬</div>
           <h3>Research IP Protection</h3>
           <p>Someone wants your thesis data.</p>
           <div class="topic-tag">3 scenarios</div>
         </button>
-        <button class="topic-card" onclick="Game.start('network')">
+        <button class="topic-card" onclick="Game.openTopic('network')">
           <div class="topic-icon">🌐</div>
           <h3>Device &amp; Network Security</h3>
           <p>You're working late in the lab...</p>
           <div class="topic-tag">3 scenarios</div>
         </button>
-        <button class="topic-card" onclick="Game.start('ip')">
+        <button class="topic-card" onclick="Game.openTopic('ip')">
           <div class="topic-icon">⚖️</div>
           <h3>IP Ownership</h3>
           <p>A startup wants your university project.</p>
           <div class="topic-tag">3 scenarios</div>
         </button>
+      </div>
+    </div>
+
+    <!-- ── SCENARIO SELECT SCREEN ── -->
+    <div id="screenScenarioSelect" class="sim-screen">
+      <div class="trail-header">
+        <div class="trail-eyebrow">Choose Your Scenario</div>
+        <h1 id="scenarioTopicTitle">Topic Name</h1>
+        <p id="scenarioIntro">Pick one of the scenario paths below to begin.</p>
+      </div>
+      <div class="topic-grid" id="scenarioGrid"></div>
+      <div class="scenario-footer">
+        <button class="btn-outline-dark" onclick="Game.restart()">Back to Topics</button>
       </div>
     </div>
 

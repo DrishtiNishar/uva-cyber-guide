@@ -59,10 +59,37 @@ const SCENARIOS = {
           good: { icon: '🔒', anim: 'anim-success', title: 'Scareware Neutralized', text: 'Browsers cannot detect viruses. This was a scareware attack designed to panic you into calling scammers who would charge you money and steal your data.' },
           bad:  { icon: '🎭', anim: 'anim-danger',  title: 'Scammed by Scareware', text: 'The "tech support" scammer charged you $300 to "fix" a nonexistent virus, then installed actual malware while connected to your machine remotely.' }
         }
+      },
+      {
+        label: 'Scene 4 · The Discord Server Invite',
+        bg: 'bg-email', icon: '🎮', anim: 'anim-pulse',
+        text: 'Someone in your CS class Discord DMs you: *"Hey, this study server has all the past exams and notes for 3240. Join quick before it fills up."* The invite link is to **discord.gg/uva-cs-l3aks**. You don\'t recognize the sender\'s username.',
+        choices: [
+          { text: 'Join immediately — free study resources are too good to pass up', correct: false },
+          { text: 'Ask a classmate you know in real life if the server is legitimate first', correct: true },
+          { text: 'Join but don\'t share any personal info', correct: false },
+        ],
+        consequence: {
+          good: { icon: '✅', anim: 'anim-success', title: 'Smart Pause', text: 'The link led to a fake server designed to harvest Discord credentials via a fake "age verification" login page. Verifying with a real classmate took 30 seconds and saved your account.' },
+          bad:  { icon: '🎭', anim: 'anim-danger',  title: 'Account Hijacked', text: 'The "join" page cloned Discord\'s login screen and captured your credentials. The attacker now controls your account and is DMing your contacts with the same link.' }
+        }
+      },
+      {
+        label: 'Scene 5 · The AI Chatbot Survey',
+        bg: 'bg-email', icon: '🤖', anim: 'anim-float',
+        text: 'An email from **"UVA Research Team" <surveys@uva-study2026.com>** invites you to complete a 5-minute AI chatbot survey for a $25 Amazon gift card. The chatbot asks for your UVA computing ID and student ID number to "verify enrollment."',
+        choices: [
+          { text: 'Complete it — $25 is worth 5 minutes and it looks like a real UVA study', correct: false },
+          { text: 'Verify the study exists by searching UVA\'s IRB-approved research registry or emailing the department directly', correct: true },
+          { text: 'Give your computing ID but not your student ID', correct: false },
+        ],
+        consequence: {
+          good: { icon: '🔍', anim: 'anim-success', title: 'Phish Identified', text: 'Legitimate UVA research studies are registered with the IRB and never ask for your computing ID via a third-party domain. The domain uva-study2026.com was registered last week.' },
+          bad:  { icon: '🪪', anim: 'anim-danger',  title: 'Identity Harvested', text: 'Your computing ID and student ID are enough to attempt account recovery and access student services. You\'ve handed attackers the two pieces they needed most.' }
+        }
       }
     ]
   },
-
   research: {
     label: 'Research IP Protection',
     takeaway: 'Unpublished research data and inventions made using UVA resources may be subject to UVA IP ownership. Always consult your faculty advisor and UVA\'s Licensing & Ventures office before sharing or commercializing your work.',
@@ -108,10 +135,37 @@ const SCENARIOS = {
           good: { icon: '🤝', anim: 'anim-success', title: 'Thoughtful Decision', text: 'Knowing what\'s confidential or sensitive in your own work before sharing is a key research skill. Setting expectations protects both of you.' },
           bad:  { icon: '😬', anim: 'anim-danger',  title: 'Academic Integrity Flag', text: 'Your roommate\'s submitted work was flagged for similarity to your draft by Turnitin. Now both of you are in an academic integrity review, even though you were trying to help.' }
         }
+      },
+      {
+        label: 'Scene 4 · The AI Writing Tool',
+        bg: 'bg-office', icon: '🤖', anim: 'anim-pulse',
+        text: 'You\'re drafting a paper based on your lab\'s unpublished findings. To speed up writing, you paste your raw data and methodology notes into a popular **AI writing assistant** to generate a draft. The tool\'s terms of service say submitted content "may be used to improve the model."',
+        choices: [
+          { text: 'Continue — it\'s just a draft and AI tools are standard now', correct: false },
+          { text: 'Stop and check with your PI — pasting unpublished data into third-party AI tools may violate your research agreement', correct: true },
+          { text: 'Use it but delete your account afterward to remove your data', correct: false },
+        ],
+        consequence: {
+          good: { icon: '🔬', anim: 'anim-success', title: 'Data Stays Protected', text: 'Many research agreements and federal grants explicitly prohibit sharing unpublished data with third-party services. Your PI appreciated the heads-up and pointed you to a UVA-approved tool.' },
+          bad:  { icon: '📤', anim: 'anim-danger',  title: 'Data Disclosed Prematurely', text: 'Your unpublished methodology was ingested by the AI provider\'s training pipeline. A competitor lab later published strikingly similar findings. Proving prior art is now your problem.' }
+        }
+      },
+      {
+        label: 'Scene 5 · The Conference Hallway',
+        bg: 'bg-office', icon: '🎤', anim: 'anim-float',
+        text: 'At a research conference, a friendly grad student from another university asks detailed questions about your **unpublished experimental results** after your poster presentation. They offer to share their own preprint in exchange.',
+        choices: [
+          { text: 'Share freely — open science is the norm and they seem genuine', correct: false },
+          { text: 'Share only what\'s already in your public abstract, and offer to connect after your paper is published', correct: true },
+          { text: 'Share everything — it\'s just a conversation, not a formal disclosure', correct: false },
+        ],
+        consequence: {
+          good: { icon: '🤝', anim: 'anim-success', title: 'Appropriate Boundary', text: 'Verbal disclosures at conferences can constitute public disclosure under patent law, potentially barring future patent filings. Keeping to your abstract protects your IP without being unfriendly.' },
+          bad:  { icon: '📋', anim: 'anim-danger',  title: 'Patent Clock Started', text: 'Under U.S. patent law, you now have one year to file a patent before public disclosure bars you entirely. Your PI\'s planned filing timeline just got compressed — and they\'re not happy.' }
+        }
       }
     ]
   },
-
   network: {
     label: 'Device & Network Security',
     takeaway: 'Never plug in unknown USB drives. Always verify Wi-Fi network names before connecting. Outdated operating systems in lab environments are a serious security risk — raise concerns through proper channels.',
@@ -157,10 +211,37 @@ const SCENARIOS = {
           good: { icon: '📋', anim: 'anim-success', title: 'Risk Escalated Properly', text: 'Unsupported OS machines are open doors to the entire campus network. Raising it through proper channels — without acting unilaterally — is exactly the right move.' },
           bad:  { icon: '🌐', anim: 'anim-danger',  title: 'Network Breach', text: 'Attackers exploited the unpatched Windows 7 machine to pivot into the university research network. Your entire lab\'s data is now under incident response lockdown.' }
         }
+      },
+      {
+        label: 'Scene 4 · The Weak Password',
+        bg: 'bg-network', icon: '🔑', anim: 'anim-float',
+        text: 'Setting up your new research server account, you choose the password **"Cavaliers2024!"** — easy to remember and it meets the minimum requirements. You use a similar pattern for your UVA email, Collab, and bank account.',
+        choices: [
+          { text: 'Keep it — it meets requirements and you\'ll remember it', correct: false },
+          { text: 'Use a password manager to generate and store a unique, random password for each account', correct: true },
+          { text: 'Add your birth year to make it unique: "Cavaliers2024!99"', correct: false },
+        ],
+        consequence: {
+          good: { icon: '🔐', anim: 'anim-success', title: 'Credential Hygiene', text: 'Password managers like Bitwarden (free) or 1Password generate unguessable, unique passwords for every site. One breach no longer cascades across all your accounts.' },
+          bad:  { icon: '🔓', anim: 'anim-danger',  title: 'Credential Stuffing', text: 'A data breach at a third-party site exposed your password pattern. Attackers ran it against UVA systems and accessed your research server, email, and financial aid portal within hours.' }
+        }
+      },
+      {
+        label: 'Scene 5 · The MFA Fatigue Attack',
+        bg: 'bg-network', icon: '📲', anim: 'anim-pulse',
+        text: 'You\'re getting a flood of Duo push notifications on your phone — 12 in one minute — that you didn\'t request. Then a call arrives from "UVA IT Support" saying there\'s a glitch and asking you to **approve one push to clear the queue**.',
+        choices: [
+          { text: 'Approve one push — it\'s UVA IT and you want the notifications to stop', correct: false },
+          { text: 'Deny all pushes, don\'t answer the call, and report to UVA IT Security via their official website', correct: true },
+          { text: 'Approve one push and immediately change your password after', correct: false },
+        ],
+        consequence: {
+          good: { icon: '🛡️', anim: 'anim-success', title: 'MFA Fatigue Blocked', text: 'This is an "MFA fatigue" or "push bombing" attack. Attackers already had your password and were betting that annoying you into approving one push. You recognized and reported it correctly.' },
+          bad:  { icon: '💥', anim: 'anim-danger',  title: 'Account Taken Over', text: 'The moment you approved the push, the attacker was in. They enrolled their own MFA device, locking you out of your own account. Recovery took 3 days and an in-person IT visit.' }
+        }
       }
     ]
   },
-
   ip: {
     label: 'IP Ownership',
     takeaway: 'Inventions created using university resources are typically owned by the university. Written collaboration agreements protect everyone\'s rights. Always consult UVA\'s IP office before open-sourcing or commercializing research software.',
@@ -206,6 +287,34 @@ const SCENARIOS = {
           good: { icon: '📝', anim: 'anim-success', title: 'Lesson Learned', text: 'Copyright law favors individual creators, not teams. A simple one-page collaboration agreement signed before the hackathon would have clearly defined everyone\'s rights and prevented this dispute.' },
           bad:  { icon: '💔', anim: 'anim-danger',  title: 'Team Dissolved', text: 'Without a written agreement, your teammate\'s lawyer argues copyright law gives them full ownership. The $5,000 prize is frozen in dispute, and the friendship is over.' }
         }
+      },
+      {
+        label: 'Scene 4 · The Social Media Post',
+        bg: 'bg-office', icon: '📸', anim: 'anim-pulse',
+        text: 'You\'re excited about a breakthrough in your lab and post a detailed Twitter/X thread explaining your novel algorithm — including a diagram — before the paper is submitted. Your advisor sees it the next morning.',
+        choices: [
+          { text: 'Post it — sharing science builds your personal brand and the work is yours', correct: false },
+          { text: 'Ask your advisor and check your research agreement before posting any unpublished details publicly', correct: true },
+          { text: 'Post a vague version without the diagram', correct: false },
+        ],
+        consequence: {
+          good: { icon: '📋', anim: 'anim-success', title: 'Publication Priority Protected', text: 'Public posts can trigger the one-year patent clock, affect journal novelty requirements, and breach sponsor agreements. Your advisor helped you craft a post that builds your brand without disclosing key IP.' },
+          bad:  { icon: '📅', anim: 'anim-danger',  title: 'Novelty Compromised', text: 'The journal rejected your submission — the Twitter thread counted as prior public disclosure, undermining the paper\'s novelty claim. The patent filing window is now compressed to under a year.' }
+        }
+      },
+      {
+        label: 'Scene 5 · The Freelance Side Project',
+        bg: 'bg-office', icon: '💰', anim: 'anim-float',
+        text: 'You take a freelance gig building a web app for a local startup — entirely in your own time, on your personal laptop, with no UVA resources. The startup asks you to sign an IP assignment transferring **all inventions** to them, including anything "related to your field of study."',
+        choices: [
+          { text: 'Sign it — the money is good and it\'s your personal time', correct: false },
+          { text: 'Negotiate to limit the IP assignment to only work done specifically for this project', correct: true },
+          { text: 'Sign it but mentally note you won\'t follow that clause', correct: false },
+        ],
+        consequence: {
+          good: { icon: '✍️', anim: 'anim-success', title: 'Contract Negotiated', text: 'Blanket IP assignments "related to your field of study" can inadvertently capture your thesis work, class projects, and future research. Limiting scope to the specific engagement is standard and reasonable.' },
+          bad:  { icon: '📎', anim: 'anim-danger',  title: 'Thesis Entangled', text: 'Two years later, the startup claims your graduate thesis algorithm falls under the IP assignment you signed. Your advisor and UVA\'s legal office are now involved in a dispute you started as a sophomore.' }
+        }
       }
     ]
   }
@@ -213,10 +322,12 @@ const SCENARIOS = {
 
 // ─── GAME STATE ───────────────────────────────────────────────
 const State = {
-  topic:    null,
-  sceneIdx: 0,
-  good:     0,
-  bad:      0,
+  topic:        null,
+  scenarioIdx:  0,
+  sceneIdx:     0,
+  activeScenes: [],
+  good:         0,
+  bad:          0,
 };
 
 // ─── DOM HELPERS ──────────────────────────────────────────────
@@ -233,30 +344,88 @@ function parseMarkup(text) {
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g,   '<em>$1</em>');
 }
+function getScenarioData() {
+  const topic = SCENARIOS[State.topic];
+  return topic?.scenarios ? topic.scenarios[State.scenarioIdx] : topic;
+}
 
-// ─── GAME OBJECT ──────────────────────────────────────────────
+function getScenarioList(topicKey) {
+  const topic = SCENARIOS[topicKey];
+  if (!topic) return [];
+  return topic.scenarios
+    ? topic.scenarios
+    : [{ label: 'Default Scenario', description: 'Classic path for this topic.', scenes: topic.scenes }];
+}
+function pickRandomScenes(scenes, count) {
+  const pool = scenes.slice();
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, Math.min(count, pool.length));
+}// ─── GAME OBJECT ──────────────────────────────────────────────
 const Game = {
 
-  start(topic) {
-    State.topic    = topic;
-    State.sceneIdx = 0;
-    State.good     = 0;
-    State.bad      = 0;
+  start(topic, scenarioIdx = 0) {
+    State.topic       = topic;
+    State.scenarioIdx = scenarioIdx;
+    State.sceneIdx    = 0;
+    State.good        = 0;
+    State.bad         = 0;
+
+    const scenario = getScenarioData();
+    State.activeScenes = pickRandomScenes(scenario.scenes, 3);
+
     showScreen('screenGame');
     this.renderScene();
   },
 
+  openTopic(topic) {
+    State.topic      = topic;
+    State.scenarioIdx = 0;
+    State.sceneIdx   = 0;
+    State.good       = 0;
+    State.bad        = 0;
+    this.renderScenarioList();
+    showScreen('screenScenarioSelect');
+  },
+
+  renderScenarioList() {
+    const data      = SCENARIOS[State.topic];
+    const scenarios = getScenarioList(State.topic);
+
+    $('scenarioTopicTitle').textContent = data.label;
+    $('scenarioIntro').textContent     = `Pick one of ${scenarios.length} scenario paths below to begin.`;
+
+    const grid = $('scenarioGrid');
+    grid.innerHTML = '';
+
+    scenarios.forEach((scenario, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'topic-card';
+      btn.onclick   = () => this.start(State.topic, idx);
+      btn.innerHTML = `
+        <div class="topic-icon">🎯</div>
+        <h3>${scenario.label}</h3>
+        <p>${scenario.description || 'A scenario path for this topic.'}</p>
+        <div class="topic-tag">${scenario.scenes.length} scenes</div>
+      `;
+      grid.appendChild(btn);
+    });
+  },
+
   renderScene() {
-    const data  = SCENARIOS[State.topic];
-    const scene = data.scenes[State.sceneIdx];
-    const total = data.scenes.length;
+    const data     = SCENARIOS[State.topic];
+    const scenario = getScenarioData();
+    const scene    = State.activeScenes[State.sceneIdx];
+    const total    = State.activeScenes.length;
 
     // Progress bar + dot
     const pct = (State.sceneIdx / total) * 100;
     $('trailProgress').style.width  = pct + '%';
     $('trailDot').style.left        = pct + '%';
     $('progressLabel').textContent  = `Scene ${State.sceneIdx + 1} of ${total}`;
-    $('hudTopic').textContent       = data.label;
+    $('hudTopic').textContent       = `${data.label}: ${scenario.label}`;
 
     // Scores
     $('goodCount').textContent = State.good;
@@ -290,7 +459,7 @@ const Game = {
   },
 
   choose(idx) {
-    const scene   = SCENARIOS[State.topic].scenes[State.sceneIdx];
+    const scene   = State.activeScenes[State.sceneIdx];
     const chosen  = scene.choices[idx];
     const isGood  = chosen.correct;
 
@@ -328,7 +497,7 @@ const Game = {
 
   next() {
     State.sceneIdx++;
-    const total = SCENARIOS[State.topic].scenes.length;
+    const total = State.activeScenes.length;
 
     if (State.sceneIdx >= total) {
       this.end();
@@ -338,7 +507,7 @@ const Game = {
   },
 
   end() {
-    const total = SCENARIOS[State.topic].scenes.length;
+    const total = State.activeScenes.length;
     const pct   = Math.round((State.good / total) * 100);
 
     // Final progress bar to 100%
@@ -374,6 +543,6 @@ const Game = {
   },
 
   replay() {
-    this.start(State.topic);
+    this.start(State.topic, State.scenarioIdx);
   }
 };
