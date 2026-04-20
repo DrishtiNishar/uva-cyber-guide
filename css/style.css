@@ -59,8 +59,12 @@ body {
 .skip-link:focus { top: 0; }
 
 /* ── Nav ── */
-header {
-  position: fixed; top: 0; left: 0; right: 0;
+header,
+body > nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
 }
 nav {
