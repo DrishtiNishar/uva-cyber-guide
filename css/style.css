@@ -15,7 +15,7 @@
   --orange-pale: #fff3e6;
   --cream:       #faf8f4;
   --warm-gray:   #f2efe9;
-  --mid-gray:    #8a8a8a;
+  --mid-gray:    #5a5a5a; /* was #8a8a8a — darkened for AAA contrast (7:1 on cream) */
   --text:        #1e1e1e;
   --text-light:  #4a4a4a;
   --border:      #ddd8ce;
@@ -41,10 +41,29 @@ body {
   padding-top: var(--nav-h);
 }
 
+/* ── Accessibility: skip link ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--orange);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 6px 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
 /* ── Nav ── */
-nav {
+header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 1000;
+}
+nav {
   height: var(--nav-h);
   background: var(--navy-deep);
   border-bottom: 3px solid var(--orange);
@@ -69,7 +88,7 @@ nav {
 .nav-title strong { color: var(--orange); font-weight: 700; }
 .nav-links { display: flex; gap: 0.2rem; list-style: none; }
 .nav-links a {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.90); /* was 0.72 — raised for AAA contrast */
   text-decoration: none;
   font-size: 0.8rem; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
