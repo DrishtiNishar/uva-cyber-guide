@@ -68,6 +68,7 @@
   position: relative;
   z-index: 1;
   margin-top: auto;
+  background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-mid) 100%);
 }
 .hero-card {
   padding: 1.8rem 1.4rem;
