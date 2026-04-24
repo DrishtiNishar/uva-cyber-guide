@@ -381,14 +381,8 @@ const Game = {
   },
 
   openTopic(topic) {
-    State.topic      = topic;
-    State.scenarioIdx = 0;
-    State.sceneIdx   = 0;
-    State.good       = 0;
-    State.bad        = 0;
-    this.renderScenarioList();
-    showScreen('screenScenarioSelect');
-  },
+  this.start(topic, 0); // ← skip path selection, go straight to the game
+},
 
   renderScenarioList() {
     const data      = SCENARIOS[State.topic];
