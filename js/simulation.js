@@ -19,7 +19,7 @@ const SCENARIOS = {
     takeaway: 'Always verify a sender\'s full email domain — not just their display name. Legitimate university services never use third-party domains or demand urgent action via link. Report suspicious emails to UVA IT Security.',
     scenes: [
       {
-        label: 'Scene 1 · The Suspicious Email',
+        label: 'The Suspicious Email',
         bg: 'bg-email', icon: '📧', anim: 'anim-float',
         text: 'You\'re studying for finals when an email arrives from **microsoft-support@noreply-secure.net**: *"Your UVA password expires in 24 hours. Click here immediately or lose access to your email."* The link points to **uva-microsoft-login.com**.',
         choices: [
@@ -33,7 +33,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 2 · The Professor Text',
+        label: 'The Professor Text',
         bg: 'bg-email', icon: '📱', anim: 'anim-pulse',
         text: 'A text arrives: *"Hi, this is Prof. Johnson. I\'m in a meeting — urgently need you to buy $200 in Amazon gift cards for a class event. Text me the codes. I\'ll reimburse you."* You\'ve never gotten a text from this professor.',
         choices: [
@@ -47,7 +47,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 3 · The Scary Pop-Up',
+        label: 'The Scary Pop-Up',
         bg: 'bg-email', icon: '⚠️', anim: 'anim-glitch',
         text: 'While browsing on campus Wi-Fi, your browser freezes and a pop-up fills the screen: *"SECURITY ALERT: Your device has a virus. Call 1-800-XXX-XXXX immediately or your files will be permanently deleted."*',
         choices: [
@@ -61,7 +61,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 4 · The Discord Server Invite',
+        label: 'The Discord Server Invite',
         bg: 'bg-email', icon: '🎮', anim: 'anim-pulse',
         text: 'Someone in your CS class Discord DMs you: *"Hey, this study server has all the past exams and notes for 3240. Join quick before it fills up."* The invite link is to **discord.gg/uva-cs-l3aks**. You don\'t recognize the sender\'s username.',
         choices: [
@@ -75,7 +75,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 5 · The AI Chatbot Survey',
+        label: 'The AI Chatbot Survey',
         bg: 'bg-email', icon: '🤖', anim: 'anim-float',
         text: 'An email from **"UVA Research Team" <surveys@uva-study2026.com>** invites you to complete a 5-minute AI chatbot survey for a $25 Amazon gift card. The chatbot asks for your UVA computing ID and student ID number to "verify enrollment."',
         choices: [
@@ -95,7 +95,7 @@ const SCENARIOS = {
     takeaway: 'Unpublished research data and inventions made using UVA resources may be subject to UVA IP ownership. Always consult your faculty advisor and UVA\'s Licensing & Ventures office before sharing or commercializing your work.',
     scenes: [
       {
-        label: 'Scene 1 · The LinkedIn Message',
+        label: 'The LinkedIn Message',
         bg: 'bg-office', icon: '🔬', anim: 'anim-float',
         text: 'You\'re proud of your AI thesis research when a LinkedIn message arrives from an overseas think tank: *"We love your work. Would you share your unpublished dataset and methodology? We\'ll cite you prominently in our report."*',
         choices: [
@@ -109,7 +109,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 2 · The Startup Deal',
+        label: 'The Startup Deal',
         bg: 'bg-office', icon: '💼', anim: 'anim-pulse',
         text: 'You invented an app during a UVA-funded research lab internship. A startup founder offers $50,000 to license it — but asks you to **sign before telling UVA**. "The deal only works if it stays quiet," they say.',
         choices: [
@@ -123,7 +123,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 3 · The Roommate Request',
+        label: 'The Roommate Request',
         bg: 'bg-office', icon: '📄', anim: 'anim-float',
         text: 'Your roommate is struggling in the same course and asks to read your thesis draft — which contains **original research findings** — for "inspiration." They promise not to copy it.',
         choices: [
@@ -137,7 +137,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 4 · The AI Writing Tool',
+        label: 'The AI Writing Tool',
         bg: 'bg-office', icon: '🤖', anim: 'anim-pulse',
         text: 'You\'re drafting a paper based on your lab\'s unpublished findings. To speed up writing, you paste your raw data and methodology notes into a popular **AI writing assistant** to generate a draft. The tool\'s terms of service say submitted content "may be used to improve the model."',
         choices: [
@@ -151,7 +151,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 5 · The Conference Hallway',
+        label: 'The Conference Hallway',
         bg: 'bg-office', icon: '🎤', anim: 'anim-float',
         text: 'At a research conference, a friendly grad student from another university asks detailed questions about your **unpublished experimental results** after your poster presentation. They offer to share their own preprint in exchange.',
         choices: [
@@ -171,7 +171,7 @@ const SCENARIOS = {
     takeaway: 'Never plug in unknown USB drives. Always verify Wi-Fi network names before connecting. Outdated operating systems in lab environments are a serious security risk — raise concerns through proper channels.',
     scenes: [
       {
-        label: 'Scene 1 · The USB Drive',
+        label: 'The USB Drive',
         bg: 'bg-lab', icon: '💾', anim: 'anim-float',
         text: 'You\'re working alone late in the CS lab. You notice a USB drive on the desk labeled **"Exam Answers – Spring 2026"**. No one else is around. The temptation is real.',
         choices: [
@@ -185,7 +185,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 2 · The Evil Twin Wi-Fi',
+        label: 'The Evil Twin Wi-Fi',
         bg: 'bg-network', icon: '📶', anim: 'anim-pulse',
         text: 'At a coffee shop near UVA, two networks appear: **UVA_WiFi** and **UVA_Secure**. The second one has a stronger signal. You need to submit an assignment quickly.',
         choices: [
@@ -199,7 +199,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 3 · The Windows 7 Machine',
+        label: 'The Windows 7 Machine',
         bg: 'bg-lab', icon: '🖥️', anim: 'anim-float',
         text: 'A research instrument in your lab is controlled by a **Windows 7 PC** — unsupported since 2020, no security patches in years. Your PI says "it works fine, don\'t touch it." A security newsletter warns lab IoT is actively being exploited.',
         choices: [
@@ -213,7 +213,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 4 · The Weak Password',
+        label: 'The Weak Password',
         bg: 'bg-network', icon: '🔑', anim: 'anim-float',
         text: 'Setting up your new research server account, you choose the password **"Cavaliers2024!"** — easy to remember and it meets the minimum requirements. You use a similar pattern for your UVA email, Collab, and bank account.',
         choices: [
@@ -227,7 +227,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 5 · The MFA Fatigue Attack',
+        label: 'The MFA Fatigue Attack',
         bg: 'bg-network', icon: '📲', anim: 'anim-pulse',
         text: 'You\'re getting a flood of Duo push notifications on your phone — 12 in one minute — that you didn\'t request. Then a call arrives from "UVA IT Support" saying there\'s a glitch and asking you to **approve one push to clear the queue**.',
         choices: [
@@ -247,7 +247,7 @@ const SCENARIOS = {
     takeaway: 'Inventions created using university resources are typically owned by the university. Written collaboration agreements protect everyone\'s rights. Always consult UVA\'s IP office before open-sourcing or commercializing research software.',
     scenes: [
       {
-        label: 'Scene 1 · The Class Project',
+        label: 'The Class Project',
         bg: 'bg-office', icon: '💻', anim: 'anim-float',
         text: 'You built an e-commerce app as a class project using **university computers** and got feedback from your professor. A classmate wants to commercialize it — 50/50 split. What\'s the critical first question?',
         choices: [
@@ -261,7 +261,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 2 · Open Sourcing Your Thesis',
+        label: 'Open Sourcing Your Thesis',
         bg: 'bg-office', icon: '🐙', anim: 'anim-pulse',
         text: 'You\'re graduating and want to open-source your **4-year thesis software** on GitHub. It includes original algorithms developed during a funded research project. Can you just post it publicly?',
         choices: [
@@ -275,7 +275,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 3 · The Hackathon Split',
+        label: 'The Hackathon Split',
         bg: 'bg-office', icon: '🏆', anim: 'anim-float',
         text: 'You won $5,000 at a hackathon — no class, no UVA funding — with two other students. Now one team member says they own **100%** because they wrote most of the code. What protects the others?',
         choices: [
@@ -289,7 +289,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 4 · The Social Media Post',
+        label: 'The Social Media Post',
         bg: 'bg-office', icon: '📸', anim: 'anim-pulse',
         text: 'You\'re excited about a breakthrough in your lab and post a detailed Twitter/X thread explaining your novel algorithm — including a diagram — before the paper is submitted. Your advisor sees it the next morning.',
         choices: [
@@ -303,7 +303,7 @@ const SCENARIOS = {
         }
       },
       {
-        label: 'Scene 5 · The Freelance Side Project',
+        label: 'The Freelance Side Project',
         bg: 'bg-office', icon: '💰', anim: 'anim-float',
         text: 'You take a freelance gig building a web app for a local startup — entirely in your own time, on your personal laptop, with no UVA resources. The startup asks you to sign an IP assignment transferring **all inventions** to them, including anything "related to your field of study."',
         choices: [
