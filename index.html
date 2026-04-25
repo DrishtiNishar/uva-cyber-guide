@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page setup + styles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UVA Cyber & IP Guide</title>
@@ -8,8 +9,10 @@
   <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+  <!-- Accessibility: skip navigation -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
+  
+  <!-- Main navigation -->
   <header>
     <nav aria-label="Main navigation">
       <a href="index.html" class="nav-brand">
@@ -25,17 +28,23 @@
     </nav>
   </header>
 
+  <!-- Main content area -->
   <main id="main-content">
+    
+    <!-- Hero section (intro + quick navigation) -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="hero-content">
         <div class="hero-eyebrow">UVA Engineering · Student Resource</div>
         <h1 id="hero-heading">Cybersecurity &amp; <em>IP Protection</em> Guide</h1>
         <p class="hero-sub">Everything UVA engineering students need to stay safe online, protect their research, and understand their intellectual property rights — in one place.</p>
+        
+        <!-- Primary actions -->
         <div class="hero-actions">
           <a href="simulation.html" class="btn-primary">▶ Start Simulation</a>
           <a href="cyber.html" class="btn-outline">Read the Guide</a>
         </div>
       </div>
+      <!-- Quick access cards to main sections -->
       <nav class="hero-cards" aria-label="Site sections">
         <a href="cyber.html" class="hero-card">
           <div class="hero-card-icon" aria-hidden="true">🛡️</div>
@@ -60,7 +69,8 @@
       </nav>
     </section>
   </main>
-
+  
+  <!-- Navigation behavior script for js -->
   <script src="js/nav.js"></script>
 </body>
 </html>
